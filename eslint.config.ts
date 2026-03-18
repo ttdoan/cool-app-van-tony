@@ -7,6 +7,7 @@ import { tanstackConfig } from '@tanstack/eslint-config'
 
 export default defineConfig([
   ...tanstackConfig,
+  pluginReact.configs.flat.recommended,
   {
     files: ['**/*.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
     plugins: { js },
@@ -24,14 +25,11 @@ export default defineConfig([
     },
   },
   {
-    ignores: ['eslint.config.js', 'prettier.config.js'],
+    ignores: [
+      'eslint.config.js',
+      'prettier.config.js',
+      '**/src/routeTree.gen.ts',
+    ],
   },
   tseslint.configs.recommended,
-  pluginReact.configs.flat.recommended,
-  {
-    files: ['**/*.{jsx,tsx,js,ts}'],
-    rules: {
-      'react/react-in-jsx-scope': 'off',
-    },
-  },
 ])
