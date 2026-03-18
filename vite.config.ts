@@ -6,9 +6,11 @@ import { tanstackRouter } from '@tanstack/router-plugin/vite'
 
 import viteReact from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
+import eslintPlugin from 'vite-plugin-eslint'
 
 const config = defineConfig({
   plugins: [
+    eslintPlugin(),
     devtools(),
     tsconfigPaths({ projects: ['./tsconfig.json'] }),
     tailwindcss(),
