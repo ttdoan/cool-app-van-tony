@@ -10,7 +10,9 @@ export default defineConfig([
   pluginReact.configs.flat.recommended,
   {
     files: ['**/*.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
-    plugins: { js },
+    plugins: {
+      js,
+    },
     extends: ['js/recommended'],
     languageOptions: { globals: globals.browser },
     settings: { react: { version: 'detect' } },
@@ -22,6 +24,7 @@ export default defineConfig([
       '@typescript-eslint/array-type': 'off',
       '@typescript-eslint/require-await': 'off',
       'pnpm/json-enforce-catalog': 'off',
+      'react/jsx-uses-react': 'off',
     },
   },
   {
