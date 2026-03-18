@@ -12,7 +12,9 @@ export default defineConfig([
     plugins: { js },
     extends: ['js/recommended'],
     languageOptions: { globals: globals.browser },
+    settings: { react: { version: 'detect' } },
     rules: {
+      'react/react-in-jsx-scope': 'off',
       'import/no-cycle': 'off',
       'import/order': 'off',
       'sort-imports': 'off',
@@ -26,4 +28,10 @@ export default defineConfig([
   },
   tseslint.configs.recommended,
   pluginReact.configs.flat.recommended,
+  {
+    files: ['**/*.{jsx,tsx,js,ts}'],
+    rules: {
+      'react/react-in-jsx-scope': 'off',
+    },
+  },
 ])
