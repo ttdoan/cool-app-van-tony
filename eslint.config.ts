@@ -9,7 +9,9 @@ export default defineConfig([
   ...tanstackConfig,
   {
     files: ['**/*.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
-    plugins: { js },
+    plugins: {
+      js,
+    },
     extends: ['js/recommended'],
     languageOptions: { globals: globals.browser },
     rules: {
@@ -19,11 +21,11 @@ export default defineConfig([
       '@typescript-eslint/array-type': 'off',
       '@typescript-eslint/require-await': 'off',
       'pnpm/json-enforce-catalog': 'off',
+      'react/react-in-jsx-scope': 'off',
+      'react/jsx-uses-react': 'off',
     },
-  },
-  {
     ignores: ['eslint.config.js', 'prettier.config.js'],
   },
   tseslint.configs.recommended,
-  pluginReact.configs.flat.recommended,
+  // pluginReact.configs.flat.recommended,
 ])
