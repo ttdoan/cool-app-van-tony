@@ -14,7 +14,9 @@ export default defineConfig([
     },
     extends: ['js/recommended'],
     languageOptions: { globals: globals.browser },
+    settings: { react: { version: 'detect' } },
     rules: {
+      'react/react-in-jsx-scope': 'off',
       'import/no-cycle': 'off',
       'import/order': 'off',
       'sort-imports': 'off',
