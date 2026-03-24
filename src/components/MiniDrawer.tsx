@@ -21,7 +21,7 @@ import { styled, useTheme } from '@mui/material/styles'
 import type { CSSObject, Theme } from '@mui/material/styles'
 import MuiAppBar from '@mui/material/AppBar'
 import type { AppBarProps as MuiAppBarProps } from '@mui/material/AppBar'
-import CustomizedSwitches from './DarkModeToggle'
+import ThemeToggle from './ThemeToggle'
 
 const drawerWidth = 240
 
@@ -141,7 +141,7 @@ export default function MiniDrawer() {
           <Typography variant="h6" noWrap component="div">
             Mini variant drawer
           </Typography>
-          <CustomizedSwitches />
+          <ThemeToggle />
         </Toolbar>
       </AppBar>
       <Drawer variant="permanent" open={open}>
