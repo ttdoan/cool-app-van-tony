@@ -25,6 +25,7 @@ export default defineConfig([
       '@typescript-eslint/require-await': 'off',
       'pnpm/json-enforce-catalog': 'off',
       'react/jsx-uses-react': 'off',
+      'no-unused-vars': 'warn',
     },
   },
   {
