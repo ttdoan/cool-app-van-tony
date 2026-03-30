@@ -1,6 +1,6 @@
 import { StrictMode } from 'react'
 import { Provider } from 'react-redux'
-import { store } from './app/store'
+import store from './store'
 import { createRouter, RouterProvider } from '@tanstack/react-router'
 import { routeTree } from './routeTree.gen'
 
@@ -16,7 +16,6 @@ declare module '@tanstack/react-router' {
   }
 }
 
-// TODO: add router
 export default function App() {
   return (
     <StrictMode>
