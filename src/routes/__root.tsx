@@ -1,10 +1,9 @@
-import MiniDrawer from '#/components/MiniDrawer'
-
-import { Outlet, createRootRoute } from '@tanstack/react-router'
+import { createRootRoute, Outlet } from '@tanstack/react-router'
 import { TanStackRouterDevtoolsPanel } from '@tanstack/react-router-devtools'
 import { TanStackDevtools } from '@tanstack/react-devtools'
 
 import '../styles.css'
+import HomeSidebar from '#/components/features/home'
 
 export const Route = createRootRoute({
   component: RootComponent,
@@ -13,7 +12,6 @@ export const Route = createRootRoute({
 function RootComponent() {
   return (
     <>
-      <MiniDrawer />
       <TanStackDevtools
         config={{
           position: 'bottom-right',
@@ -25,6 +23,7 @@ function RootComponent() {
           },
         ]}
       />
+      <HomeSidebar />
       <main>
         <Outlet />
       </main>

@@ -4,10 +4,12 @@ import tseslint from 'typescript-eslint'
 import pluginReact from 'eslint-plugin-react'
 import { defineConfig } from 'eslint/config'
 import { tanstackConfig } from '@tanstack/eslint-config'
+import pluginRouter from '@tanstack/eslint-plugin-router'
 
 export default defineConfig([
   ...tanstackConfig,
   pluginReact.configs.flat.recommended,
+  ...pluginRouter.configs['flat/recommended'],
   {
     files: ['**/*.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
     plugins: {
